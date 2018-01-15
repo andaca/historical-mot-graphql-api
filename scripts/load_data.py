@@ -22,8 +22,7 @@ def main():
     data = (dict(zip(cols, r)) for r in rows)
 
     for d in data:
-        d['first_use_date'] = datetime.strptime(
-            d['first_use_date'], '%Y-%m-%d')
+        d['first_use_date'] = datetime.strptime(d['first_use_date'], '%Y-%m-%d')
         d['test_date'] = datetime.strptime(d['test_date'], '%Y-%m-%d')
 
     print(data)
